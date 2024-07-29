@@ -1,4 +1,5 @@
-import { createBrowserRouter, RouterProvider, createRoutesFromElements, Route, Link, Outlet } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, createRoutesFromElements, Route } from "react-router-dom";
+import { GlobalStyle } from "./styles/CommonStyles.styled";
 import Home from "./pages/Home/Home";
 import Contacts from "./pages/Contacts/Contacts";
 import About from "./pages/About/About";
@@ -13,13 +14,14 @@ function App() {
         <Route index element={<Home/>} />
         <Route path="/contacts" element={<Contacts/>} />
         <Route path="/about" element={<About/>} />
-         <Route path="/category" element={<Category/>} />{/* category id need to show on click */}
+        <Route path="/category" element={<Category/>} />{/* category id need to show on click */}
       </Route>
     )
   )
 
   return (
     <div>
+      <GlobalStyle/>
       <RouterProvider router={router} />
     </div>
   )
