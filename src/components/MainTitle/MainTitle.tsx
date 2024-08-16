@@ -1,8 +1,11 @@
 import { Title } from "./MainTitle.styled";
 
-export default function MainTitle({category}) {
+export default function MainTitle({ text, page }) {
 
   return (
-      <Title>Websites related to {category.toUpperCase()} category</Title>
+  <>
+      {page === "category" && <Title>{text}</Title>}
+      {page === "home" && <Title>{text}</Title>}
+    </>
   )
 }

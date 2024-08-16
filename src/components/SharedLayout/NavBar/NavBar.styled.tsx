@@ -20,14 +20,13 @@ color: ${baseTheme.color.title};
 export const NavigationBox = styled.div`
   position: absolute;
   top: 46px;
-
   width: 100%;
   height: 50vh;
   padding: clamp(15px, 0.67rem + 1.34vw, 30px);
-  background-color: #ece7f1;
+  background-color: ${baseTheme.color.body};
 overflow: auto;
 
-box-shadow: 0px 5px 12px -6px rgba(0,0,0,0.75);
+box-shadow: ${baseTheme.shadow.navigation};
   border-bottom: 1px solid ${baseTheme.color.borderSection};
 `
 
@@ -40,6 +39,6 @@ padding: 5px 0 5px 10px;
 `
 export const NavLink = styled(Link)`
 flex-grow: 1;
-  font-size: 18px;
-  color: ${baseTheme.color.text};
+font-size: 18px;
+color: ${baseTheme.color.text};
 `

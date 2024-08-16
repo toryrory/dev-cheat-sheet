@@ -14,7 +14,8 @@ function App() {
         <Route index element={<Home />} />
         <Route path="/contacts" element={<Contacts />} />
         <Route path="/about" element={<About />} />
-        <Route path="/category/:categoryId" element={<Category />} />{/* category id need to show on click */}
+        <Route path="/category/:categoryId" element={<Category />} />
+        {/* create nested route for one or more results website in searchbar */}
       </Route>
     )
   )

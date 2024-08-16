@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { websiteLinks } from "../../data/websiteLinks";
 import WebsitesList from "../../components/WebsitesList/WebsitesList";
-import { Container, ListSection } from "../../styles/global";
+import { Container, Section } from "../../styles/global";
 import MainTitle from "../../components/MainTitle/MainTitle";
 
 export default function Category() {
@@ -21,20 +21,21 @@ export default function Category() {
 
   }, [pageId]); //sort data and write to state
 
-
+  const text = `Websites related to ${categoryId} category`
 
   return (
 
     <>
-      {websites.length !== 0 &&
-        <ListSection>
+      {
+        websites.length !== 0 &&
+        
+        <Section>
           <Container>
-            <MainTitle category={categoryId} />
+            <MainTitle text={text} page={"category"} />
             <WebsitesList websites={websites} />
           </Container>
-        </ListSection>}
-
-      {/* <a id="html" href="https://htmlreference.io/" target="_blank">HTML elements type</a>
-      <a id="css" href="https://cssgenerator.org/box-shadow-css-generator.html" target="_blank">CSS shadow generator</a> */}
+          </Section>
+       
+      }
     </>)
 }

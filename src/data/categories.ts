@@ -1,1 +1,1 @@
-export const categoryNames: string[] = ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Redux", "Styled-Components", "Router-Dom", "Forms validation", "NextJS", "Images&Icons", "GitHub", "VSCode settings", "Utilites"];
+export const categoryNames: string[] = ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Redux", "Styled-Components", "Router-Dom", "Forms validation", "NextJS", "Images&Icons", "GitHub", "VSCode settings", "Utilites", "Trainings"];

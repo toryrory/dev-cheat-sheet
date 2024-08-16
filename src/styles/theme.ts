@@ -3,40 +3,35 @@ export const baseTheme = {
     color: {
         /* bg */
         body: "#E9E1FF",
+        // body: "linear-gradient(135deg, #E9E1FF, #CDB6FF, #B59EFF);",
         cardBg: "#FFFFFF",
 
         /* text */
-        title: "#7A59A1",
+        // title: "#7A59A1",
+        title: "#5f457d",
         text: "#333333",
         textTime: "#4D4D4D",
 
         /* buttons */
         buttonBg: "#C5A3FF",
         buttonText: "#FFFFFF",
-        // buttonText: "#5A3D75",
         borderBtn: "#7A59A1",
         
         /* section */
         borderSection: "#D6C9FF",
 
         /* accent */
-        // accent: "#FFD700",
         accent: "#FF6B6B",
-        // buttonBgHover: "#FFD700",
-        // buttonBgHover: "#A3FFC5", 
-        // buttonBgHover: "#FFC5A3", 
-        // buttonBgHover: "#A3D8FF", 
         buttonBgHover: "#FF6B6B", 
-        // buttonBgHover: "#FFF9A3", 
-        
-        // buttonBorderHover: "#CCAC00",
-        // buttonBorderHover: "#5FCC99",
-        // buttonBorderHover: "#CC9F80",
-        // buttonBorderHover: "#6BA9CC",
         buttonBorderHover: "#CC4E4E",
-        // buttonBorderHover: "#CCC680",
 
+        /* searchBar */
+        searchBg: "#fbfafd",
+        
     },
+    shadow: {
+        navigation : "0px 5px 12px -6px rgba(0,0,0,0.75)",
+    }
     // media,
     // size,
     // duration,

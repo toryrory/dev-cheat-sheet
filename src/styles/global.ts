@@ -6,7 +6,7 @@ import { baseTheme } from "./theme";
 
 export const GlobalStyle = createGlobalStyle`
     body {
-background-color: ${baseTheme.color.body};
+background: ${baseTheme.color.body};
     }
     /* Reset and base styles  */
 * {
@@ -125,7 +125,7 @@ width: 100%;
     margin: 0 auto;
 `
 
-export const ListSection = styled.section`
+export const Section = styled.section`
   padding: 30px 0 40px;
 `
 

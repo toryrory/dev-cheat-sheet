@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Container } from "../../../styles/global";
-import { HeaderBase, HeaderFlexBox, LogoImg, HeaderBtnsBox, HeaderBtn } from "./Header.styled";
+import { HeaderBase, HeaderFlexBox, LogoImg, HeaderBtnsBox, HeaderBtn, BtnBorder } from "./Header.styled";
 import { MdOutlineLightMode } from "react-icons/md";
 import { IoSearchOutline } from "react-icons/io5";
 import SearchBar from "../../SearchBar/SearchBar";
@@ -11,11 +11,9 @@ export default function Header() {
 
     const onClickSearch = () => {
         setOpenSearch(prevState => !prevState)
-
     }
 
     return (
-
         <HeaderBase >
             <Container>
                 <HeaderFlexBox className="HeaderNav">
@@ -25,12 +23,13 @@ export default function Header() {
                         </Link>
                     </div>
                     <HeaderBtnsBox>
-                        <HeaderBtn type="button" name="theme"><MdOutlineLightMode style={{ width: " 30px", height: "30px", verticalAlign: "middle" }} /></HeaderBtn>
-                        <HeaderBtn type="button" name="search" onClick={onClickSearch}><IoSearchOutline style={{ width: " 30px", height: "30px", verticalAlign: "middle" }} /></HeaderBtn>
+                        <BtnBorder>
+                        <HeaderBtn type="button" name="theme"><MdOutlineLightMode style={{ width: " 30px", height: "30px", verticalAlign: "middle" }} /></HeaderBtn></BtnBorder>
+                        <BtnBorder><HeaderBtn type="button" name="search" onClick={onClickSearch}><IoSearchOutline style={{ width: " 30px", height: "30px", verticalAlign: "middle" }} /></HeaderBtn></BtnBorder>
                     </HeaderBtnsBox>
                 </HeaderFlexBox>
             </Container>
-            {openSearch && <SearchBar />}
+            <SearchBar open={openSearch} closeSearch={onClickSearch} />
         </HeaderBase>
     )
 }
