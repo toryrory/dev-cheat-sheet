@@ -1,3 +1,4 @@
+import {keyframes} from "styled-components";
 
 export const baseTheme = {
     color: {
@@ -37,6 +38,17 @@ export const baseTheme = {
     // duration,
     // order
 }
+
+/* animations */
+export const scaleDescArrow = keyframes`
+    0% {
+        transform: scale(1);
+    } 50% {
+        transform: scale(1.2);
+    } 100% {
+        transform: scale(1);
+    }
+`
 
 // Фон страницы: #E9E1FF
 // Заголовки: #7A59A1

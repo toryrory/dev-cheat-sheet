@@ -6,7 +6,7 @@ export const websiteLinks = [
     category: "html",
     body: {
         title: "HTML elements type",
-        description: "Shows elements type by it`s display and description of each type",
+        description: "Shows elements type by it`s display and description of each type pppppppp pppppppppp ppppppp pppppppppppppppppppp ppppppppppp ppppppppp ppppp ppppppppppppppp ppppppppp p ppppppppppppppppppppppp ppppppppppppp ppppppppp pppppppppppp pppppppppppppp",
         img: "../../public/websites-img-preview/HTML_elements_type.jpg",
         url: "https://htmlreference.io/"
     }

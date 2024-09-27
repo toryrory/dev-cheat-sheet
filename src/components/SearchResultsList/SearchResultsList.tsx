@@ -1,19 +1,44 @@
 import SearchResultsItem from "../SearchResultsItem/SearchResultsItem";
 import { useState, useEffect } from "react";
-import { websiteLinks } from "../../data/websiteLinks";
+import { shortUUID } from "../../utils/utils";
+import { searchWebsites } from "../../utils/utils";
+import { ListContainer } from "./SearchResultsList.styled";
 
-export default function SearchResultsLits({ searchData }: { searchData: string }) {
+export default function SearchResultsLits({ searchData, modalOpen }: { searchData: string, modalOpen: boolean }) {
   const [resultData, setResultData] = useState([]);
+  const [noResults, setNoResults] = useState(false)
 
-  /* сделать юзефект который срабатывает когда стейт поиска опен = тру. тогда после первого ввода начинается фильтрация и обработать бновление стейта результатов и добавление карточек*/
-  const results = websiteLinks.filter(website => website.body.title.toLowerCase().includes(searchData) || website.body.description.toLowerCase().includes(searchData));
-  console.log(results);
+  useEffect(() => {
+    setResultData([]);
+  }, [modalOpen])
+
+  useEffect(() => {
+    if (!searchData) {
+      setResultData([]);
+      return;
+    }
+
+    setResultData([]);
+    setNoResults(false);
+
+    const results = searchWebsites(searchData);
+
+    if (results.length === 0) {
+      setNoResults(true);
+    } else {
+      setTimeout(() => {
+        setResultData(results);
+      }, 1000);
+    }
+  }, [searchData])
 
   return (
-    <div>
+    <ListContainer>
       <ul>
-        <p>hi</p>
+        {/* добавить скролл */}
+        {searchData && resultData && resultData.map(({ id, category, body }) => <SearchResultsItem key={shortUUID()} id={id} title={body.title} category={category} url={body.url} />)}
+        {noResults && <p>No results...</p>}
       </ul>
-    </div>
+    </ListContainer>
   )
 }

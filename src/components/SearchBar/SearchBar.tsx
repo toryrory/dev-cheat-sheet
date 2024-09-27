@@ -38,7 +38,7 @@ export default function SearchBar({ open, closeSearch }: BtnProps) {
                     </Form>
                     <BtnClose type="button" onClick={closeSearch}><RxCross1 style={{ width: " 40px", height: "40px", color: "#7A59A1" }} /></BtnClose>
                 </FormBox>
-                <SearchResultsList searchData={searchData} />
+                <SearchResultsList searchData={searchData} modalOpen={open} />
             </SearchContainer>
         </SearchModal>
 
